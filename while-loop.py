@@ -11,3 +11,5 @@ while luckyNumber != 7:
 
 else:
     print("Yes! you Got the Right Number")
+
+# This work fine :)
