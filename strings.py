@@ -108,5 +108,8 @@ lastName = "islam"
 
 hobby = "python"
 
-print("My Name is " + firstName.title() + " " + lastName.title() +  " and Love to Program in"+ hobby.upper())
+print("My Name is " + firstName.title() + " " + lastName.title() +  " and Love to Program in "+ hobby.upper())
 
+language = "bangla".swapcase()
+
+print(language)
