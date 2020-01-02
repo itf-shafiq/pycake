@@ -110,6 +110,19 @@ hobby = "python"
 
 print("My Name is " + firstName.title() + " " + lastName.title() +  " and Love to Program in "+ hobby.upper())
 
+# Use of swapcase() Function 
+
 language = "bangla".swapcase()
 
 print(language)
+
+# Use of len() function 
+
+random = "HellO I am Shafiq"
+
+print(len(random))
+
+# Use of count()
+
+print(random.count("a"))
+
