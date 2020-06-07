@@ -18,6 +18,8 @@ while unPrintedDesign:
 for printeddesign in printeddesigns:
     print('\n' + "'" + printeddesign + "'" + " has been printed ")
 
+print(unPrintedDesign)
+
 #########################################################
 
 def printModels(unprintedDesign, printedDesign):
@@ -33,4 +35,5 @@ def printModels(unprintedDesign, printedDesign):
 
 unprintedDesign = ['car model','gun model','rocket pendent','iPhone case']
 printedDesign = []
-printModels(unprintedDesign,printedDesign)
+printModels(unprintedDesign[:],printedDesign)
+print(unprintedDesign)
