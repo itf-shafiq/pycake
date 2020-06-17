@@ -62,20 +62,40 @@ while active:
         # print("Write 'done' when you your answer is finish")
         favorite_language = input("what is your favorite language? ").lower()
         favorite_languages.append(favorite_language)
-        count += 1
-        yes_or_not = input("Do you have any other favorite language?  ").lower()
+        
+        # ask user if they had any other language choice
+        yes_or_not = input("Do you have any other favorite language? write 'yes' or 'no' ").lower()
 
+        # if yes_or_not == 'yes' or yes_or_not == 'no':
+
+            # if user had more then one language choice then run this loop
         while yes_or_not == 'yes':
-            print("3rd while loop")
+            
             favorite_language = input("what is your favorite language? ").lower()
             favorite_languages.append(favorite_language)
-            count += 1
-            yes_or_not = input("Do you have any other favorite language?  ").lower()
+            
+            # again ask user if they had any other language choice 
+            # if yes the continue the loop if no the break the loop
+            yes_or_not = input("Do you have any other favorite language? write 'yes' or 'no' ").lower()
         
             if yes_or_not == 'no':
-                 active01 = False
+                active01 = False
+        else:
+            # ask user if they had any other language choice
+            yes_or_not = input("Do you have any other favorite language? write 'yes' or 'no' ").lower()
 
-    yes_or_not = input("Do you want to play more ?  ").lower()
+    # after one persone had finish his poll add his result in poll result dictionary
+    # then remove all item from name and favorite language so that we can start with a new empty list    
+    for name in names:
+        poll_result[name] = favorite_languages[:len(favorite_languages)]
+        del names[0]
+
+        for i in range(len(favorite_languages)):
+            del favorite_languages[0]
+
+    # ask user if they want to take part poll anymore 
+    # if yes the start from the start point again 
+    yes_or_not = input("Do you want to play more ? write 'yes' or 'no' ").lower()
 
     if yes_or_not == 'yes':
         name = input("what is your name? ").lower()
@@ -88,32 +108,35 @@ while active:
             # print("Write 'done' when you your answer is finish")
             favorite_language = input("what is your favorite language? ").lower()
             favorite_languages.append(favorite_language)
-            yes_or_not = input("Do you have any other favorite language?  ").lower()
+            yes_or_not = input("Do you have any other favorite language? write 'yes' or 'no' ").lower()
 
             while yes_or_not == 'yes':
-                print("3rd while loop")
+                
                 favorite_language = input("what is your favorite language? ").lower()
                 favorite_languages.append(favorite_language)
-                yes_or_not = input("Do you have any other favorite language?  ").lower()
+                yes_or_not = input("Do you have any other favorite language? write 'yes' or 'no' ").lower()
             
                 if yes_or_not == 'no':
                     active01 = False
 
-            yes_or_not = input("Do you want to play more ?  ").lower()
+            yes_or_not = input("Do you want to play more ? write 'yes' or 'no' ").lower()
 
     if yes_or_not == 'no':
 
         active = False
 
-    for name in names:
-        poll_result[name] = favorite_languages[:len(names)]
 
-        for i in range(len(names)):
+    for name in names:
+        poll_result[name] = favorite_languages[:len(favorite_languages)]
+        del names[0]
+
+        for i in range(len(favorite_languages)):
             del favorite_languages[0]
 
+    
 
 poll(name,favorite_language)
-print(count)
+
     
 
 
