@@ -101,7 +101,7 @@ print(describe_city("barlin","germany"))
 print(describe_city(city_name = "silicon valley", country_name= "america"))"""
 
 # Loop practice in function
-
+"""
 def get_formated_name(first_name,last_name):
     full_name = first_name + " " + last_name
 
@@ -121,7 +121,4 @@ while True:
 
     formatedName = get_formated_name(f_name, l_name)
     print("Your formated name is " + formatedName)
-    print(type(l_name))
-
-
-
+    print(type(l_name))"""
